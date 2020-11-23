@@ -1,0 +1,14 @@
+package src.com.np.service;
+
+import src.com.np.dao.InvestissementDao;
+
+public class InvestissementService {
+
+	// 1.Déclaration du Dao
+	InvestissementDao dao = new InvestissementDao();
+	
+	public int afficherInvestissement(int IdClient) {
+		return dao.getAllInvestissement(IdClient) ;
+
+	}
+}

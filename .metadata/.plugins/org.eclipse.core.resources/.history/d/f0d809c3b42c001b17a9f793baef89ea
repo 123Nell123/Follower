@@ -1,0 +1,42 @@
+
+CREATE TABLE IF NOT EXISTS `clients` (
+  `Idclient` int(10) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(30) NOT NULL DEFAULT '',
+  `prenom` varchar(30) NOT NULL DEFAULT '',
+  `email` varchar(30) DEFAULT NULL,
+  `adresse` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`IdClient`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `utilisateurs`
+--
+
+INSERT INTO `clients` (`nom`, `prenom`, `email`, `adresse`) VALUES
+('MBIANDOU', 'Douglas', 'douglas.mbiandou@objis.com', 'Lyon');
+
+
+CREATE TABLE IF NOT EXISTS `conseiller` (
+  `login` varchar(25) NOT NULL DEFAULT '',
+  `password` varchar(10) NOT NULL DEFAULT '',
+  `nom` varchar(30) NOT NULL DEFAULT '',
+  `prenom` varchar(30) NOT NULL DEFAULT '',
+  `email` varchar(30) DEFAULT NULL,
+  `adresse` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`login`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `conseiller` (`login`, `password`, `nom`, `prenom`) VALUES
+('douglas', 'mdpdoug', 'MBIANDOU', 'Douglas');
+
+
+CREATE TABLE IF NOT EXISTS `investissement` (
+ `Idinvestissement` int(10) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(30) NOT NULL DEFAULT '',
+  `descriptif` varchar(30) NOT NULL DEFAULT '',
+  PRIMARY KEY (`Idinvestissement`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `investissement` (`nom`,`descriptif`) VALUES
+('douglas', 'mdpdoug', 'MBIANDOU', 'Douglas');
+

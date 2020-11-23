@@ -1,0 +1,106 @@
+package src.com.np.presentation;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import src.com.np.domaine.Client;
+import src.com.np.domaine.Conseiller;
+import src.com.np.service.ClientService;
+import src.com.np.service.ConseillerService;
+import src.com.np.service.ServiceAuth;
+
+/**
+ * Servlet implementation class identification
+ */
+@WebServlet("/MaServlet")
+public class MaServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public MaServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		try {
+			traitement(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		try {
+			traitement(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	////***** la methode executee par post et Get********
+	private void traitement(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+
+		////	//
+
+
+		// recuperer   login et password du formulaire
+		String login = request.getParameter("login");
+		String password = request.getParameter("password");
+
+
+
+		// on cree un conseiller qui a un login et un mot de passe
+		Conseiller conseiller = new Conseiller(login, password)  ;
+
+		// verifie l'authentification
+		ServiceAuth service = new ServiceAuth();
+		boolean authentification = service.estValide(conseiller);
+
+		if (authentification==false) {System.out.println("erreur d'authentification " + " " +conseiller.getLogin());}
+		else
+		{
+			// on recupere toutes les infos du conseiller depuis l'authentification
+			Conseiller conseillerAuthentifie = new Conseiller(" "," ",0,"","")  ;
+			conseillerAuthentifie = service.authentification(conseiller);
+			// on passe ces parametres en session
+			System.out.println("nom" + conseillerAuthentifie.getNom());
+			
+			HttpSession maSession = request.getSession();
+			maSession.setAttribute("nom", conseillerAuthentifie.getNom());
+			maSession.setAttribute("prenom", conseillerAuthentifie.getPrenom());
+			
+			RequestDispatcher dispatcher;
+
+			dispatcher = request.getRequestDispatcher("afficherNomConseiller.jsp");
+	
+
+			dispatcher.forward(request, response);
+		}
+		}
+	}
+
+
+

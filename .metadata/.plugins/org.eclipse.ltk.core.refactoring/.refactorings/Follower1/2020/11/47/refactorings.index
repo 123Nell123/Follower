@@ -1,0 +1,23 @@
+1606022856587	Delete element
+1606023679864	Rename package 'src.com.np.controler'
+1606023827093	Rename package 'src.com.np.clientele'
+1606023852286	Move compilation unit
+1606023859541	Move compilation unit
+1606023866627	Move compilation unit
+1606023872367	Delete element
+1606023901975	Move compilation unit
+1606023908351	Move compilation unit
+1606023915868	Move compilation unit
+1606023929469	Delete element
+1606023935094	Delete element
+1606024001769	Delete element
+1606024074699	Copy compilation unit
+1606024108541	Copy compilation unit
+1606026691861	Rename type 'GestionConnexionBd'
+1606030187778	Rename type 'GestionConnexionBdSql'
+1606030208629	Rename type 'ConnexionDB'
+1606030734033	Rename method 'authentifierConseiller'
+1606033877821	Rename resource 'login.jsp'
+1606034198612	Rename type 'identification'
+1606036357177	Move 'afficherNomConseiller.jsp' to 'WEB-INF'
+1606040649194	Rename resource 'Index.jsp'

@@ -1,0 +1,32 @@
+package com.np.membre;
+
+public class AssistantConseiller {
+	
+	private String nom="";
+	private String prenom="";
+	private String ID="";
+	
+//	***getter et setter ****
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	public String getPrenom() {
+		return prenom;
+	}
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+	public String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
+	
+
+	
+	
+}

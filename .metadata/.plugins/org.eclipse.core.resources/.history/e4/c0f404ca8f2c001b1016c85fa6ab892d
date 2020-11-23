@@ -1,0 +1,12 @@
+package src.com.np.dao;
+
+public class ConseillerDao {
+
+	
+	public int authentifierConseiller(Conseiller conseiller){
+		
+		
+		return Id;
+		
+	}
+}

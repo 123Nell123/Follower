@@ -1,0 +1,5 @@
+package src.com.np.infra;
+
+public class GestionConnexionBd {
+
+}

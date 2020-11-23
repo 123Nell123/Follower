@@ -1,0 +1,20 @@
+package src.com.np.infra;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import src.com.np.infra.GestionConnexionBdSql;
+
+public class ConnexionDB {
+	Statement st;
+	ResultSet rs;
+	Connection cn;
+
+	public void getConnexion() {
+	GestionConnexionBdSql Db = new GestionConnexionBdSql();
+	Db.connexionBd();
+	cn = Db.getConnexion();
+	}
+	
+}

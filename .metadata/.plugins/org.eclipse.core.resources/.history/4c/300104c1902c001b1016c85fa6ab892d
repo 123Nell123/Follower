@@ -1,0 +1,18 @@
+package src.com.np.dao;
+
+import src.com.np.domaine.Conseiller;
+import src.com.np.infra.ConnexionDB;
+
+public class ConseillerDao {
+
+	
+	public int authentifierConseiller(Conseiller conseiller){
+		
+		ConnexionDB connexion = new ConnexionDB();
+		connexion.getConnexion();
+		
+		
+		return Id;
+		
+	}
+}
