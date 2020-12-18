@@ -58,5 +58,6 @@ public class InvestissementDao {
 		return listeInvestissement;
 	}
 
-
+public Investissement getInvestissementByClient(int IdClient) {
+	return null;}
 }

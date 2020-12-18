@@ -73,7 +73,7 @@ logger.log(Level.INFO, "demarrage du traitement ");
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
 
-
+System.out.println("login" +login + "password"+ password);
 
 		// on cree un conseiller qui a un login et un mot de passe
 		Conseiller conseiller = new Conseiller(login, password)  ;
@@ -85,6 +85,7 @@ logger.log(Level.INFO, "demarrage du traitement ");
 		if (authentification==false) {System.out.println("erreur d'authentification " + " " +conseiller.getLogin());}
 		else
 		{
+			System.out.println("conseille identifie");
 			
 			// TODO a revoir a partir d'ici
 			// on recupere toutes les infos du conseiller depuis l'authentification
@@ -101,9 +102,9 @@ logger.log(Level.INFO, "demarrage du traitement ");
 			
 			RequestDispatcher dispatcher;
 
-			//dispatcher = request.getRequestDispatcher("acceuil.jsp");
+			dispatcher = request.getRequestDispatcher("acceuil.jsp");
 	
-			dispatcher = request.getRequestDispatcher("WEB-INF/afficherNomConseiller.jsp");
+			//dispatcher = request.getRequestDispatcher("WEB-INF/afficherNomConseiller.jsp");
 			dispatcher.forward(request, response);
 		}
 		}

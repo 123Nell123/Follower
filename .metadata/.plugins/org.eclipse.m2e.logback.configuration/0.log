@@ -838,3 +838,20 @@ Caused by: java.io.FileNotFoundException: C:\Users\Oneal\.m2\repository\org\ecli
 2020-11-22 19:01:01,240 [Framework stop - Equinox Container: a7b63a4b-c513-446d-a484-189148f92e21] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
 2020-11-22 19:01:01,335 [Framework stop - Equinox Container: a7b63a4b-c513-446d-a484-189148f92e21] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1b5bd1f5{/wse,null,UNAVAILABLE}
 2020-11-22 19:01:15,472 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-04 15:52:27,929 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-05 05:47:46,959 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-06 14:06:38,161 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-12-06 14:08:45,661 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @147468ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-12-06 14:08:45,865 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.31.v20200723; built: 2020-08-03T13:24:06.825Z; git: 450ba27947e13e66baa8cd1ce7e85a4461cacc1d; jvm 14.0.2+12-46
+2020-12-06 14:08:45,882 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2020-12-06 14:08:45,882 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2020-12-06 14:08:45,884 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+2020-12-06 14:08:45,913 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@55ba52cc{/wse,null,AVAILABLE}
+2020-12-06 14:08:45,940 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7b857cc8{HTTP/1.1, (http/1.1)}{0.0.0.0:63406}
+2020-12-06 14:08:45,940 [main] INFO  org.eclipse.jetty.server.Server - Started @147749ms
+2020-12-06 14:08:45,940 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+2020-12-06 15:19:30,730 [Framework stop - Equinox Container: 454fa125-e944-41a1-964b-c3b55186321b] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7b857cc8{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2020-12-06 15:19:30,731 [Framework stop - Equinox Container: 454fa125-e944-41a1-964b-c3b55186321b] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+2020-12-06 15:19:30,765 [Framework stop - Equinox Container: 454fa125-e944-41a1-964b-c3b55186321b] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@55ba52cc{/wse,null,UNAVAILABLE}
+2020-12-06 15:19:46,457 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-12-16 12:58:55,741 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

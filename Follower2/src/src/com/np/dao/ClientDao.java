@@ -58,4 +58,102 @@ public class ClientDao {
 		return listeClient;
 	}
 
+	
+	
+	public Client getClientByName(String nom, String prenom) {
+		//TODO remplacer dynamique par codage en dur
+		
+		GestionConnexionDB connexion = new GestionConnexionDB();
+		cn = connexion.getConnexion();
+		Client client = new Client();
+
+
+		try {
+			// Création d'un statement
+			st = cn.createStatement();
+
+			String sql = "SELECT * FROM `clients` where (nom= '"+ nom +"'  AND   prenom=  '" + prenom +"'   ) ";
+			//String sql = "SELECT * FROM `clients` where (nom ='MBIANDOU')  ";
+			// exécution requête
+			rs = st.executeQuery(sql);
+
+			// Si récup données alors étapes 5 (parcours Resultset)
+			
+			if (rs.next())
+			{
+			
+				if (nom.equals(rs.getString("nom")) & prenom.equals(rs.getString("prenom"))   )
+					
+				{
+					
+				client.setNom(rs.getString("nom"));
+				client.setID(rs.getInt("idclient"));
+				client.setNom(rs.getString("nom"));
+				client.setPrenom(rs.getString("prenom"));
+				client.setMail(rs.getString("email"));
+				client.setAdresse(rs.getString("adresse"));
+				}
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		connexion.disConnexion();
+
+		return client;
+		
+	}
+
+	
+	public Client getClientById(int IdClient) {
+GestionConnexionDB connexion = new GestionConnexionDB();
+
+
+		
+		cn = connexion.getConnexion();
+		Client client = new Client();
+		
+		try {
+			// Création d'un statement
+			st = cn.createStatement();
+
+			String sql = "SELECT * FROM `clients` where IdClient= '"+ IdClient +"'      ";
+			// exécution requête
+			rs = st.executeQuery(sql);
+
+			// Si récup données alors étapes 5 (parcours Resultset)
+			
+			if (rs.next())
+			{
+			
+				if (IdClient == rs.getInt("id_client")) 
+					
+				{
+				client.setNom(rs.getString("nom"));
+				client.setID(rs.getInt("id_client"));
+				client.setNom(rs.getString("nom"));
+				client.setPrenom(rs.getString("prenom"));
+				client.setMail(rs.getString("mail"));
+				client.setAdresse(rs.getString("adresse"));
+				}
+			}
+		}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+			
+		
+		connexion.disConnexion();
+		
+		
+		//TODO remplacer dynamique par codage en dur
+		return client;
+		}
+	
+	
+	
+	
+	
+	
+	
 }
