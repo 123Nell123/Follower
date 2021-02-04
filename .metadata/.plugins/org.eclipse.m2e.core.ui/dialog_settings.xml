@@ -62,11 +62,13 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="org.np.project"/>
 			<item value="Follower"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Follower2"/>
 			<item value="Follower"/>
 		</list>
 		<list key="version">

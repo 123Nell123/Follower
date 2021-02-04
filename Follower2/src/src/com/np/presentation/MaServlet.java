@@ -17,7 +17,7 @@ import src.com.np.domaine.Client;
 import src.com.np.domaine.Conseiller;
 import src.com.np.service.ClientService;
 import src.com.np.service.ConseillerService;
-import src.com.np.service.ServiceAuth;
+import src.com.np.service.AuthService;
 
 /**
  * Servlet implementation class identification
@@ -79,7 +79,7 @@ System.out.println("login" +login + "password"+ password);
 		Conseiller conseiller = new Conseiller(login, password)  ;
 
 		// verifie l'authentification
-		ServiceAuth service = new ServiceAuth();
+		AuthService service = new AuthService();
 		boolean authentification = service.estValide(conseiller);
 
 		if (authentification==false) {System.out.println("erreur d'authentification " + " " +conseiller.getLogin());}

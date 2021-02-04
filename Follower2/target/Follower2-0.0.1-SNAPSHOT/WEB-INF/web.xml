@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>MaServlet</servlet-name>
+		<servlet-class>src.com.np.presentation.MaServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MaServlet</servlet-name>
+		<url-pattern>/bonjour</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>MaServletTraitement</servlet-name>
+		<servlet-class>src.com.np.presentation.MaServletTraitement</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MaServletTraitement</servlet-name>
+		<url-pattern>/bonjour2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MaServletClient</servlet-name>
+		<servlet-class>src.com.np.presentation.MaServletClient</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MaServletClient</servlet-name>
+		<url-pattern>/bonjour3</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+ <servlet-name>MaServletFichier</servlet-name>
+        <servlet-class>com.octest.servlets.MaServletFichier</servlet-class>
+        <multipart-config>
+            <location>/data/FichierTemporaireClient/</location>    <!-- a adapter serveur etc..  -->
+            <max-file-size>10485760</max-file-size> <!-- 10 Mo -->
+            <max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo taille maxi du fichier  -->
+            <file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaServletFichier</servlet-name>
+        <url-pattern>/bonjour4</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>

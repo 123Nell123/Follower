@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 14
+Class-Path: poi-4.1.2.jar commons-codec-1.13.jar commons-collections4-4.
+ 4.jar commons-math3-3.6.1.jar SparseBitSet-1.2.jar
+Main-Class: src.com.np.launcher.Launcher
+Build-Host: 
+Build-Java: 14.0.2
+Build-Label: 0.0.1-SNAPSHOT
+Build-Maven: Maven 3.6.3
+Build-OS: Windows 10
+Build-Path: D:\10-ODysseal\workspaceFinal\Follower2
+Build-Time: 2021-02-03T11:20:46Z
+Build-User: Oneal
+Created-By: Maven Integration for Eclipse
+

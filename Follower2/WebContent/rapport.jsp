@@ -24,6 +24,26 @@
 quel rapport souhaiter vous éditer ?
 
 
+//todo creer une servlet qui lance Conseiller.rapport 
+
+
+
+<%@ include file= "menu.jsp" %> 
+<br>
+<br>
+rentrez le nom du client souhaité 
+(ToDebug un client existant est MBIANDOU Douglas)
+  <form action="MaServletRapport"  method="post">
+           <p>Nom : <input type="text" name="nom" placeholder="MBIANDOU"/></p>
+            <p>Prenom : <input type="text" name="prenom" placeholder="Douglas"/></p>
+            
+                  <p>pour l'instant ne rien rentrer appuyer juste sur valider</p>
+            
+           <p><input type="submit"  value="valider" /></p>
+        </form>
+
+
+
 
 
 

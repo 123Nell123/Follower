@@ -1,10 +1,13 @@
 package src.com.np.dao;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.InvalidPropertiesFormatException;
 
 import src.com.np.domaine.Client;
 import src.com.np.domaine.Investissement;
@@ -18,7 +21,7 @@ public class InvestissementDao {
 	Connection cn;
 
 	// Méthode pour récupérer Tous les investissements depuis un client donné
-	public ArrayList<Investissement> getAllInvestissement(int IdClient) {
+	public ArrayList<Investissement> getAllInvestissement(int IdClient)  {
 		// Information d'accès à la base de données
 
 		GestionConnexionDB connexion = new GestionConnexionDB();
@@ -59,5 +62,15 @@ public class InvestissementDao {
 	}
 
 public Investissement getInvestissementByClient(int IdClient) {
-	return null;}
+	Investissement investissement = null;;
+	return investissement;
+	}
+
+
+
+public  void addInvestissementByClient(int IdClient) {
+	//TODO
+	
+	
+	;}
 }

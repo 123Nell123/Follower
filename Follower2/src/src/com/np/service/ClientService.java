@@ -14,6 +14,13 @@ public class ClientService {
 		return dao.getAllClient(idConseiller);
 
 	}
+	
+	public ArrayList<Client> recupererListeClient() {
+		return dao.getAllClientBase();
+
+	}
+	
+	
 	public Client TrouverClientParNom(String nom, String prenom) {
 		return dao.getClientByName(nom, prenom);
 	}

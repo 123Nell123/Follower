@@ -2,11 +2,14 @@ package src.com.np.dao;
 
 
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.InvalidPropertiesFormatException;
 
 import src.com.np.domaine.Client;
 import src.com.np.infraBDD.GestionConnexionDB;
@@ -25,11 +28,12 @@ public class ClientDao {
 
 		GestionConnexionDB connexion = new GestionConnexionDB();
 		
-	
-		cn = connexion.getConnexion();
 		ArrayList<Client> listeClient = new ArrayList<Client>();
-
+		
 		try {
+			cn = connexion.getConnexion();
+		
+
 			// Création d'un statement
 			st = cn.createStatement();
 
@@ -58,9 +62,47 @@ public class ClientDao {
 		return listeClient;
 	}
 
+	public ArrayList<Client> getAllClientBase()  {
+		// Information d'accès à la base de données
+
+		GestionConnexionDB connexion = new GestionConnexionDB();
+		
 	
+		ArrayList<Client> listeClient = new ArrayList<Client>();
+
+		try {
+			cn = connexion.getConnexion();
+			
+			// Création d'un statement
+			st = cn.createStatement();
+
+			String sql = "SELECT * FROM `clients`   ";
+			// exécution requête
+			rs = st.executeQuery(sql);
+
+			// Si récup données alors étapes 5 (parcours Resultset)
+			while (rs.next()) {
+				Client client = new Client();
+
+				client.setID(rs.getInt("id_client"));
+				client.setNom(rs.getString("nom"));
+				client.setPrenom(rs.getString("prenom"));
+				client.setMail(rs.getString("mail"));
+				client.setAdresse(rs.getString("adresse"));
+
+				listeClient.add(client);
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		connexion.disConnexion();
+
+		return listeClient;
+	}
+
 	
-	public Client getClientByName(String nom, String prenom) {
+	public Client getClientByName(String nom, String prenom)  {
 		//TODO remplacer dynamique par codage en dur
 		
 		GestionConnexionDB connexion = new GestionConnexionDB();
@@ -149,7 +191,9 @@ GestionConnexionDB connexion = new GestionConnexionDB();
 		//TODO remplacer dynamique par codage en dur
 		return client;
 		}
-	
+
+
+
 	
 	
 	

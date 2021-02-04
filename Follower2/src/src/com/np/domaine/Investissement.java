@@ -26,4 +26,11 @@ public abstract class Investissement {
 		this.IdInvestissement = IdInvestissement;
 	}
 	
+	public Investissement() {
+		super();
+	}
+	
+	
+	
+	
 }

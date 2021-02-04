@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+    <entry key="fichierALire">D:\\10-ODysseal\\workspaceFinal\\Follower2\\output\\rapport_client.xls</entry> 
+     <entry key="fichierACreer">D:\\10-ODysseal\\ouput\\rapport\\model5.xls</entry>
+     <entry key="fichierAModifier">D:\\10-ODysseal\\workspaceFinal\\Follower2\\output\\rapport_client.xls</entry>
+     
+</properties>

@@ -1,5 +1,10 @@
 package src.com.np.domaine;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import src.com.np.rapport.ClientRapport;
+
 public class Conseiller {
 	
 	private String nom="";
@@ -94,9 +99,13 @@ public String getLogin() {
 		//TODO
 	}
 	
-	public void editerRapport() {
-		//TODO
-	}
+	/*public List<Client> editerRapport() {
+		List<Client> clients = new ArrayList<Client>();
+		ClientRapport clientrapport = new ClientRapport();
+		clientrapport.
+		return clients;
 	
+	}
+		*/
 	
 }
